@@ -1,14 +1,17 @@
-import React from 'react';
-import { StylesProvider, ThemeProvider } from '@material-ui/core/styles';
-import './App.css';
+import { ThemeProvider } from '@material-ui/core/styles';
+import { Route, Routes } from 'react-router-dom';
 import { theme } from './service/theme';
+import './App.css';
+import Home from './pages/Home';
 
 function App() {
   return (
     <div className="LightTheme" style={{overflowX: 'hidden'}}>
       <ThemeProvider theme={theme}>
-      <div>Teste</div>
-      </ThemeProvider>
+        <Routes>
+          <Route path='/*' element={<Home />} />
+        </Routes>
+      </ThemeProvider>  
     </div>
   );
 }
