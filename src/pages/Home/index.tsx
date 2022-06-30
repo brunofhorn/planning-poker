@@ -1,6 +1,7 @@
 import { Grid, Slide } from '@material-ui/core';
 import { useMatch } from 'react-router-dom';
 import CreateGame from '../../components/CreateGame';
+import JoinGame from '../../components/JoinGame';
 import RecentGames from '../../components/RecentGames';
 
 export const Home = () => {
@@ -30,7 +31,7 @@ export const Home = () => {
                             flexDirection: 'column',
                             alignItems: 'center',
                             justifyContent: 'center'
-                        }}>{isJoin ? "JUNTAR" : <CreateGame />}</div>
+                        }}>{isJoin ? <JoinGame /> : <CreateGame />}</div>
                     </Grid>
                 </Grid>
             </Grid>
