@@ -3,6 +3,7 @@ import { ThemeProvider, StylesProvider } from '@material-ui/core/styles';
 import { Route, Routes } from 'react-router-dom';
 import { theme } from './service/theme';
 import Home from './pages/Home';
+import { Game } from "./pages/Game";
 import Toolbar from './components/Toolbar';
 
 function App() {
@@ -13,6 +14,8 @@ function App() {
           <CssBaseline />
           <Toolbar />
           <Routes>
+            <Route path='/game/:id' element={<Game />} />
+            <Route path='/join/:id' element={<Home />} />
             <Route path='/*' element={<Home />} />
           </Routes>
         </StylesProvider>
