@@ -2,33 +2,33 @@ import { Card, CardContent, CardHeader, Table, TableBody, TableCell, TableContai
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export const RecentSessions = () => {
+export const RecentGames = () => {
     const navigate = useNavigate();
-    const [recentSessions, setRecentSessions] = useState<any[] | undefined>(undefined);
+    const [recentGames, setRecentGames] = useState<any[] | undefined>(undefined);
 
-    const isEmptyRecentSessions = (): boolean => {
-        if (!recentSessions) {
+    const isEmptyRecentGames = (): boolean => {
+        if (!recentGames) {
             return true;
         }
-        if (recentSessions && recentSessions.length === 0) {
+        if (recentGames && recentGames.length === 0) {
             return true;
         }
         return false;
     };
 
     return (
-        <Card variant='outlined' className='RecentSessionsCard'>
+        <Card variant='outlined' className='RecentGamesCard'>
             <CardHeader
-                className='RecentSessionsCardTitle'
+                className='RecentGamesCardTitle'
                 title='Sessões Recentes'
                 titleTypographyProps={{ variant: 'h6', noWrap: true }}
             />
-            <CardContent className='RecentSessionsCardContent'>
-                {isEmptyRecentSessions() && (
+            <CardContent className='RecentGamesCardContent'>
+                {isEmptyRecentGames() && (
                     <Typography variant='body2'>Nenhuma sessão recente encontrada</Typography>
                 )}
-                {recentSessions && recentSessions.length > 0 && (
-                    <TableContainer className='RecentSessionsTableContainer'>
+                {recentGames && recentGames.length > 0 && (
+                    <TableContainer className='RecentGamesTableContainer'>
                         <Table stickyHeader>
                             <TableHead>
                                 <TableRow>
@@ -38,15 +38,15 @@ export const RecentSessions = () => {
                                 </TableRow>
                             </TableHead>
                             <TableBody>
-                                {recentSessions.map((recentSession) => (
+                                {recentGames.map((recentGame) => (
                                     <TableRow
                                         hover
-                                        key={recentSession.id}
-                                        className='RecentSessionsTableRow'
-                                        onClick={() => navigate(`/game/${recentSession.id}`)}
+                                        key={recentGame.id}
+                                        className='RecentGamesTableRow'
+                                        onClick={() => navigate(`/game/${recentGame.id}`)}
                                     >
-                                        <TableCell>{recentSession.name}</TableCell>
-                                        <TableCell align='left'>{recentSession.createdBy}</TableCell>
+                                        <TableCell>{recentGame.name}</TableCell>
+                                        <TableCell align='left'>{recentGame.createdBy}</TableCell>
                                         <TableCell align='left'></TableCell>
                                     </TableRow>
                                 ))}
@@ -59,4 +59,4 @@ export const RecentSessions = () => {
     )
 }
 
-export default RecentSessions;
+export default RecentGames;
