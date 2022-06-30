@@ -26,11 +26,11 @@ export const Toolbar = () => {
                             </Typography>
                         </div>
                         <div>
-                            <Button title="Nova Sessão" startIcon={<AddCircleOutline />} color='inherit' onClick={() => navigate('/')}>
-                                {!isSmallScreen ? 'Criar uma Nova Sessão' : null}
+                            <Button className="ButtonToolbar" title="Nova Sessão" startIcon={<AddCircleOutline />} size={isSmallScreen ? "small" : "large"} color='inherit' onClick={() => navigate('/')}>
+                                {!isSmallScreen ? 'Criar uma Nova Sala' : null}
                             </Button>
-                            <Button startIcon={<MergeTypeOutlined />} size={isSmallScreen ? "small" : "large"} color='inherit' onClick={() => navigate('/join')}>
-                                {!isSmallScreen ? 'Entrar em uma Sessão' : null}
+                            <Button className="ButtonToolbar" startIcon={<MergeTypeOutlined />} size={isSmallScreen ? "small" : "large"} color='inherit' onClick={() => navigate('/join')}>
+                                {!isSmallScreen ? 'Entrar em uma Sala' : null}
                             </Button>
                             <Button
                                 id='github-button'

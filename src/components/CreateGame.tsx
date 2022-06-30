@@ -1,7 +1,6 @@
 import { Button, Card, CardActions, CardContent, CardHeader, Grow, TextField } from "@material-ui/core";
 import { ChangeEvent, FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { theme } from "../assets/css/style";
 import { addNewGame } from "../service/games";
 import { GameType, NewGame } from "../types/game";
 import "../assets/css/CreateGame.css";
@@ -30,7 +29,7 @@ export const CreateGame = () => {
                 <Card variant='outlined' className='CreateGameCard'>
                     <CardHeader
                         className='CreateGameCardHeader'
-                        title='Criar uma Nova Sessão'
+                        title='Criar uma Nova Sala'
                         titleTypographyProps={{ variant: 'h4' }}
                     />
                     <CardContent className='CreateGameCardContent'>
@@ -38,8 +37,8 @@ export const CreateGame = () => {
                             className='CreateGameTextField'
                             required
                             id='filled-required'
-                            label='Nome da Sessão'
-                            placeholder='Digite o nome da sessão'
+                            label='Nome da Sala'
+                            placeholder='Digite o nome da sala'
                             defaultValue={gameName}
                             variant='outlined'
                             onChange={(event: ChangeEvent<HTMLInputElement>) => setGameName(event.target.value)}
@@ -57,7 +56,7 @@ export const CreateGame = () => {
                     </CardContent>
                     <CardActions className='CreateGameCardAction'>
                         <Button type='submit' variant='contained' color='primary' className='CreateGameButton'>
-                            Criar Sessão
+                            Criar Sala
                         </Button>
                     </CardActions>
                 </Card>

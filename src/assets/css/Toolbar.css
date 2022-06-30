@@ -1,5 +1,5 @@
 .AppBar {
-    box-shadow: none;
+    box-shadow: 2px;
     background-color: var(--color-background);
     flex-grow: 1;
     white-space: nowrap;
@@ -20,4 +20,13 @@
     color: var(--color-primary);
     margin-top: 4px;
     margin-right: 5px;
+}
+
+.ButtonToolbar {
+    margin-right: 5px;
+}
+
+.ButtonToolbar:hover {
+    background-color: var(--color-primary);
+    color: white;
 }

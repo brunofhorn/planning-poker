@@ -3,9 +3,16 @@
 }
 
 .CreateGameButton {
-    color: var(--color-background);
+    background-color: var(--color-primary);
+    color: white;
     width: 70%;
     border-radius: 40px;
+}
+
+.CreateGameButton:hover {
+    background-color: white;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
 }
 
 .CreateGameCard {

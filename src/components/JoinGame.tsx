@@ -1,7 +1,6 @@
 import { Button, Card, CardActions, CardContent, CardHeader, Grow, TextField } from "@material-ui/core";
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { theme } from "../assets/css/style";
 import { getGame } from "../service/games";
 import { addPlayerToGame, isCurrentPlayerInGame } from "../service/players";
 import "../assets/css/JoinGame.css";
