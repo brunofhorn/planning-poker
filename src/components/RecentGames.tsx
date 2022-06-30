@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@material-ui/core";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "../assets/css/RecentGames.css";
 
 export const RecentGames = () => {
     const navigate = useNavigate();

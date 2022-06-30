@@ -1,25 +1,15 @@
 import { Divider, Link, Slide, Typography } from "@material-ui/core";
 import { Copyright } from '@material-ui/icons';
+import "../assets/css/Footer.css";
 
 export const Footer = () => {
     return (
         <footer>
             <Slide in={true} direction='up' timeout={3000}>
-                <div style={{ marginTop: 30 }}>
+                <div className='FooterSection'>
                     <Divider variant='middle'></Divider>
-                    <div style={{
-                        padding: 20,
-                        display: "flex",
-                        justifyContent: "space-evenly",
-                        alignItems: "center",
-                        textAlign: "center"
-                    }}>
-                        <div style={{
-                            display: "flex",
-                            flexDirection: "row",
-                            alignItems: "center",
-                            paddingRight: 10
-                        }}>
+                    <div className='FooterContainer'>
+                        <div className='FooterItemContainer'>
                             <Copyright color='secondary' fontSize='small' />
                             <Typography color='textSecondary' variant='body2'>
                                 brunofhorn
@@ -27,12 +17,7 @@ export const Footer = () => {
                         </div>
 
                         <Divider orientation='vertical' flexItem></Divider>
-                        <div style={{
-                            display: "flex",
-                            flexDirection: "row",
-                            alignItems: "center",
-                            paddingRight: 10
-                        }}>
+                        <div className='FooterItemContainer'>
                             <Typography color='textSecondary' variant='body2'>
                                 GFT Planning Poker
                             </Typography>

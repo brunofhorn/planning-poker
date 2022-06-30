@@ -4,7 +4,7 @@ import AppToolbar from '@material-ui/core/Toolbar';
 import logo from '../assets/img/gft_logo.jpg';
 import { AddCircleOutline, MergeTypeOutlined, GitHub } from '@material-ui/icons';
 import { useNavigate } from 'react-router-dom';
-import { theme } from "../assets/css/style";
+import "../assets/css/Toolbar.css";
 
 export const Toolbar = () => {
     const navigate = useNavigate();
@@ -12,26 +12,13 @@ export const Toolbar = () => {
 
     return (
         <Slide direction='down' in={true} timeout={800}>
-            <AppBar position='sticky' className='AppBar' style={{
-                boxShadow: 'none',
-                backgroundColor: theme.colors.backgroundPrimary,
-                flexGrow: 1,
-                whiteSpace: 'nowrap'
-            }}>
+            <AppBar position='sticky' className='AppBar'>
                 <AppToolbar>
-                    <div className='HeaderContainer' style={{
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        width: '100%'
-                    }}>
+                    <div className='HeaderContainer'>
                         <div
                             className='HeaderLeftContainer'
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                cursor: 'pointer'
-                            }}
-                            onClick={() => navigate("/")}
+                            onClick={() => navigate('/')}
+                            style={{ alignItems: 'center' }}
                         >
                             <img src={logo} style={{ width: 130, height: 24, marginRight: 10 }} />
                             <Typography variant={isSmallScreen ? 'subtitle1' : 'h6'} style={{ color: '#213F7F' }} noWrap>
@@ -39,7 +26,7 @@ export const Toolbar = () => {
                             </Typography>
                         </div>
                         <div>
-                            <Button title="Nova Sessão" startIcon={<AddCircleOutline />} color='inherit' onClick={() => navigate("/")}>
+                            <Button title="Nova Sessão" startIcon={<AddCircleOutline />} color='inherit' onClick={() => navigate('/')}>
                                 {!isSmallScreen ? 'Criar uma Nova Sessão' : null}
                             </Button>
                             <Button startIcon={<MergeTypeOutlined />} size={isSmallScreen ? "small" : "large"} color='inherit' onClick={() => navigate('/join')}>

@@ -3,6 +3,7 @@ import { Player } from "../types/player";
 import { CardPicker } from "./CardPicker";
 import { GameController } from "./GameController";
 import { Players } from "./Players";
+import "../assets/css/GameArea.css";
 
 interface GameAreaProps {
     game: Game;
@@ -16,25 +17,11 @@ export const GameArea: React.FC<GameAreaProps> = ({
 }) => {
     return (
         <>
-            <div style={{
-                display: "flex",
-                flexDirection: "column",
-                minHeight: "60%",
-                borderWidth: 1,
-                borderColor: "white",
-                borderStyle: "solid",
-                overflow: "auto",
-                padding: 2,
-                justifyContent: "center"
-            }}>
+            <div className='ContentArea'>
                 <Players game={game} players={players} />
                 <GameController game={game} currentPlayerId={currentPlayerId} />
             </div>
-            <div style={{
-                textAlign: "center",
-                display: "flex",
-                justifyContent: "center"
-            }}>
+            <div className='Footer'>
                 <CardPicker
                     game={game}
                     players={players}

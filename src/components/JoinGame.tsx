@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { theme } from "../assets/css/style";
 import { getGame } from "../service/games";
 import { addPlayerToGame, isCurrentPlayerInGame } from "../service/players";
+import "../assets/css/JoinGame.css";
 
 export const JoinGame = () => {
     const navigate = useNavigate();
@@ -43,31 +44,29 @@ export const JoinGame = () => {
         <Grow in={true} timeout={500}>
             <div>
                 <form onSubmit={handleSubmit}>
-                    <Card variant='outlined' style={{
-                        background: "transparent",
-                        border: 0
-                    }}>
+                    <Card variant='outlined' className='JoinGameCard'>
                         <CardHeader
-                            style={{ textAlign: "center" }}
+                            className='JoinGameCardHeader'
                             title='Entrar em uma Sala'
                             titleTypographyProps={{ variant: 'h4' }}
                         />
-                        <CardContent style={{ textAlign: "center" }}>
+                        <CardContent className='JoinGameCardContent'>
                             <TextField
                                 error={!gameFound}
                                 helperText={!gameFound && 'Sala não encontrada, verifique o ID'}
+                                className='JoinGameTextField'
                                 required
                                 id='filled-required'
                                 label='ID da Sala'
-                                placeholder='1234...'
+                                placeholder='xyz...'
                                 defaultValue={joinGameId}
                                 variant='outlined'
                                 onChange={(event: ChangeEvent<HTMLInputElement>) =>
                                     setJoinGameId(event.target.value)
                                 }
-                                style={{ width: "70%", paddingBottom: 30 }}
                             />
                             <TextField
+                                className='JoinGameTextField'
                                 required
                                 id='filled-required'
                                 label='Seu Nome'
@@ -77,19 +76,14 @@ export const JoinGame = () => {
                                 onChange={(event: ChangeEvent<HTMLInputElement>) =>
                                     setPlayerName(event.target.value)
                                 }
-                                style={{ width: "70%", paddingBottom: 30 }}
                             />
                         </CardContent>
-                        <CardActions style={{ justifyContent: "center" }}>
+                        <CardActions className='JoinGameCardAction'>
                             <Button
                                 type='submit'
                                 variant='contained'
                                 color='primary'
-                                style={{
-                                    color: theme.colors.backgroundPrimary,
-                                    width: "70%",
-                                    borderRadius: 40
-                                }}
+                                className='JoinGameButton'
                             >
                                 Entrar na Sala
                             </Button>

@@ -6,6 +6,7 @@ import { getCurrentPlayerId } from "../service/players";
 import { Game } from "../types/game";
 import { Player } from "../types/player";
 import GameArea from "./GameArea";
+import "../assets/css/Poker.css";
 
 export const Poker = () => {
     let { id } = useParams<{ id: any }>();
