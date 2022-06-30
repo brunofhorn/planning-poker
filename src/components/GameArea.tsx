@@ -16,11 +16,25 @@ export const GameArea: React.FC<GameAreaProps> = ({
 }) => {
     return (
         <>
-            <div className='ContentArea'>
+            <div style={{
+                display: "flex",
+                flexDirection: "column",
+                minHeight: "60%",
+                borderWidth: 1,
+                borderColor: "white",
+                borderStyle: "solid",
+                overflow: "auto",
+                padding: 2,
+                justifyContent: "center"
+            }}>
                 <Players game={game} players={players} />
                 <GameController game={game} currentPlayerId={currentPlayerId} />
             </div>
-            <div className='Footer'>
+            <div style={{
+                textAlign: "center",
+                display: "flex",
+                justifyContent: "center"
+            }}>
                 <CardPicker
                     game={game}
                     players={players}

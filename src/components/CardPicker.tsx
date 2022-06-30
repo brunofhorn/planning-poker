@@ -5,6 +5,7 @@ import { updatePlayerValue } from "../service/players";
 import { Game } from "../types/game";
 import { Player } from "../types/player";
 import { Status } from "../types/status";
+import "../assets/css/CardPicker.css";
 
 interface CardPickerProps {
     game: Game;

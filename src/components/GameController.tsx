@@ -6,6 +6,7 @@ import { Visibility, Refresh, ExitToApp, Link } from '@material-ui/icons';
 import { finishGame, resetGame } from "../service/games";
 import { blue, green, orange } from "@material-ui/core/colors";
 import { Alert } from "@material-ui/lab";
+import "../assets/css/GameController.css";
 
 interface GameControllerProps {
     game: Game;

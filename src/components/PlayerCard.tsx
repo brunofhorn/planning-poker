@@ -3,6 +3,7 @@ import { getCards } from "../service/card";
 import { Game, GameType } from "../types/game";
 import { Player } from "../types/player";
 import { Status } from "../types/status";
+import "../assets/css/PlayerCard.css";
 
 interface PlayerCardProps {
     game: Game;

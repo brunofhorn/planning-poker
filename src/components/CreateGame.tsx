@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { theme } from "../assets/css/style";
 import { addNewGame } from "../service/games";
 import { GameType, NewGame } from "../types/game";
+import "../assets/css/CreateGame.css";
 
 export const CreateGame = () => {
     const navigate = useNavigate();
@@ -26,32 +27,25 @@ export const CreateGame = () => {
     return (
         <Grow in={true} timeout={1000}>
             <form onSubmit={handleSubmit}>
-                <Card variant='outlined' style={{
-                    background: "transparent",
-                    border: 0,
-                    padding: 50
-                }}>
+                <Card variant='outlined' className='CreateGameCard'>
                     <CardHeader
-                        title='Criar uma Nova Sala'
+                        className='CreateGameCardHeader'
+                        title='Criar uma Nova Sessão'
                         titleTypographyProps={{ variant: 'h4' }}
-                        style={{ textAlign: "center" }}
                     />
-                    <CardContent style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        textAlign: "center"
-                    }}>
+                    <CardContent className='CreateGameCardContent'>
                         <TextField
+                            className='CreateGameTextField'
                             required
                             id='filled-required'
-                            label='Nome da Sala'
-                            placeholder='Digite o nome da sala'
+                            label='Nome da Sessão'
+                            placeholder='Digite o nome da sessão'
                             defaultValue={gameName}
                             variant='outlined'
                             onChange={(event: ChangeEvent<HTMLInputElement>) => setGameName(event.target.value)}
-                            style={{ paddingBottom: 30 }}
                         />
                         <TextField
+                            className='CreateGameTextField'
                             required
                             id='filled-required'
                             label='Seu Nome'
@@ -59,20 +53,11 @@ export const CreateGame = () => {
                             defaultValue={createdBy}
                             variant='outlined'
                             onChange={(event: ChangeEvent<HTMLInputElement>) => setCreatedBy(event.target.value)}
-                            style={{ paddingBottom: 30 }}
                         />
                     </CardContent>
-                    <CardActions style={{ justifyContent: "center" }}>
-                        <Button
-                            type='submit'
-                            variant='contained'
-                            color='primary'
-                            style={{
-                                color: theme.colors.backgroundPrimary,
-                                width: "70%",
-                                borderRadius: 40
-                            }}>
-                            Criar Sala
+                    <CardActions className='CreateGameCardAction'>
+                        <Button type='submit' variant='contained' color='primary' className='CreateGameButton'>
+                            Criar Sessão
                         </Button>
                     </CardActions>
                 </Card>
