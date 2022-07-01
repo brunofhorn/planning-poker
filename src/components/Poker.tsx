@@ -37,6 +37,56 @@ export const Poker = () => {
                     players.push(snapshot.data() as Player);
                 });
                 setPlayers(players);
+
+                let pl = [
+                    {
+                        "id": "01G6XA0JS1ENRT5FWNXTF8Z3B3",
+                        "status": "Não Iniciado",
+                        "name": "SuperHero"
+                    },
+                    {
+                        "id": "01G6XA0JS1ENRT5FWNXTF8Z3443",
+                        "status": "Não Iniciado",
+                        "name": "SuperHero 2"
+                    },
+                    {
+                        "id": "02G6XA0JS1ENRT5FWNXTF8Z3443",
+                        "status": "Não Iniciado",
+                        "name": "SuperHero 3"
+                    },
+                    {
+                        "id": "03G6XA0JS1ENRT5FWNXTF8Z3443",
+                        "status": "Não Iniciado",
+                        "name": "SuperHero 4"
+                    },
+                    {
+                        "id": "04G6XA0JS1ENRT5FWNXTF8Z3443",
+                        "status": "Não Iniciado",
+                        "name": "SuperHero 5"
+                    },
+                    {
+                        "id": "06G6XA0JS1ENRT5FWNXTF8Z3443",
+                        "status": "Não Iniciado",
+                        "name": "SuperHero 6"
+                    },
+                    {
+                        "id": "07G6XA0JS1ENRT5FWNXTF8Z3443",
+                        "status": "Não Iniciado",
+                        "name": "SuperHero 7"
+                    },
+                    {
+                        "id": "08G6XA0JS1ENRT5FWNXTF8Z3443",
+                        "status": "Não Iniciado",
+                        "name": "SuperHero 8"
+                    },
+                    {
+                        "id": "09G6XA0JS1ENRT5FWNXTF8Z3443",
+                        "status": "Não Iniciado",
+                        "name": "SuperHero 9"
+                    }
+                ] as Player[];
+
+                setPlayers(pl);
             });
 
             const currentPlayerId = getCurrentPlayerId(id);

@@ -1,4 +1,4 @@
-import { Button, Card, CardActions, CardContent, CardHeader, Grow, TextField } from "@material-ui/core";
+import { Button, Card, CardActions, CardContent, CardHeader, FormControl, Grow, InputLabel, Select, TextField } from "@material-ui/core";
 import { ChangeEvent, FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { addNewGame } from "../service/games";
@@ -53,6 +53,27 @@ export const CreateGame = () => {
                             variant='outlined'
                             onChange={(event: ChangeEvent<HTMLInputElement>) => setCreatedBy(event.target.value)}
                         />
+                        <FormControl variant="outlined" >
+                            <InputLabel htmlFor="filled-age-native-simple">Tipo de Votação</InputLabel>
+                            <Select
+                                native
+                                value={gameType}
+                                onChange={(
+                                    event: ChangeEvent<{
+                                        name?: string | undefined;
+                                        value: any;
+                                    }>
+                                ) => setGameType(event.target.value)}
+                                inputProps={{
+                                    name: 'age',
+                                    id: 'filled-age-native-simple',
+                                }}
+                            >
+                                <option value={GameType.Fibonacci}>Fibonacci</option>
+                                <option value={GameType.ShortFibonacci}>ShortFibonacci</option>
+                                <option value={GameType.TShirt}>TShirt</option>
+                            </Select>
+                        </FormControl>
                     </CardContent>
                     <CardActions className='CreateGameCardAction'>
                         <Button type='submit' variant='contained' color='primary' className='CreateGameButton'>
