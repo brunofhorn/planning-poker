@@ -111,7 +111,7 @@ export const Poker = () => {
     return (
         <>
             {game && players && currentPlayerId ? (
-                <GameAreaTable game={game} players={players} currentPlayerId={currentPlayerId} />
+                <GameArea game={game} players={players} currentPlayerId={currentPlayerId} />
             ) : (
                 <Typography>Sala não encontrada</Typography>
             )}
