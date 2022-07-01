@@ -7,6 +7,7 @@ import { Game } from "../types/game";
 import { Player } from "../types/player";
 import GameArea from "./GameArea";
 import "../assets/css/Poker.css";
+import GameAreaTable from "./GameAreaTable";
 
 export const Poker = () => {
     let { id } = useParams<{ id: any }>();
@@ -110,7 +111,7 @@ export const Poker = () => {
     return (
         <>
             {game && players && currentPlayerId ? (
-                <GameArea game={game} players={players} currentPlayerId={currentPlayerId} />
+                <GameAreaTable game={game} players={players} currentPlayerId={currentPlayerId} />
             ) : (
                 <Typography>Sala não encontrada</Typography>
             )}
