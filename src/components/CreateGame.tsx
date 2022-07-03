@@ -7,8 +7,8 @@ import "../assets/css/CreateGame.css";
 
 export const CreateGame = () => {
     const navigate = useNavigate();
-    const [gameName, setGameName] = useState('Avengers');
-    const [createdBy, setCreatedBy] = useState('SuperHero');
+    const [gameName, setGameName] = useState('FrontEnd');
+    const [createdBy, setCreatedBy] = useState("");
     const [gameType, setGameType] = useState(GameType.Fibonacci);
 
     const handleSubmit = async (event: FormEvent) => {
