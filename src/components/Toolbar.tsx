@@ -20,7 +20,7 @@ export const Toolbar = () => {
                             onClick={() => navigate('/')}
                             style={{ alignItems: 'center' }}
                         >
-                            <img src={logo} style={{ width: 130, height: 24, marginRight: 10 }} />
+                            {/* <img src={logo} style={{ width: 130, height: 24, marginRight: 10 }} /> */}
                             <Typography variant={isSmallScreen ? 'subtitle1' : 'h6'} style={{ color: '#213F7F' }} noWrap>
                                 PLANNING POKER
                             </Typography>
